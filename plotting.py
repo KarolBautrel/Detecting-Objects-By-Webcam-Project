@@ -18,10 +18,10 @@ p = figure(x_axis_type="datetime", height=300,
 hover = HoverTool(
     tooltips=[("Start_string", "@Start_string"), ("End_string", "@End_string")])  # adding to tooltip values
 p.add_tools(hover)
-# ustawienie wykresu w formie quadrantow. lewy bok to start a prawy to end czyli koniec
-p.quad(left="Start", right="End", bottom=0, top=1,
+
+p.quad(left="Start", right="End", bottom=0, top=1,# plot as quadrant. Left side of quad will display "Start" column value and righ "End" column value.
        color="slategray", source=cds)   # source = cds means we are using columns from pandas (cds are our df)
-p.yaxis.visible = False  # wylaczenie widzialnosci wartosci osi y
-p.ygrid.grid_line_color = None  # wylaczenie siatki y
+p.yaxis.visible = False  # 
+p.ygrid.grid_line_color = None  # 
 output_file("Graph.html")
 show(p)
